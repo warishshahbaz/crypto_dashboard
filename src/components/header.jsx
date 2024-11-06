@@ -12,7 +12,8 @@ const HeaderComp = () => {
           src={
             "https://img.freepik.com/free-vector/flat-design-crypto-mining-logo-template_23-2149409053.jpg?t=st=1730802295~exp=1730805895~hmac=601c6c4b1225b86cd4f8d1528294fd64d727ebd64d40b8a1d9e60820bd06c040&w=740"
           }
-          className="w-20 h-20"
+          width={"50px"}
+          height={"50px"}
           alt="logo"
         />
       </div>
