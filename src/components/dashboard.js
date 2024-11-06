@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Layout, Button, Table, Empty, Card } from "antd";
+import { Layout, Table, Empty, Card } from "antd";
 import { Doughnut, Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -32,7 +32,7 @@ ChartJS.register(
 );
 // Your existing options and COLUMN configuration code...
 
-const { Header, Content } = Layout;
+const { Content } = Layout;
 
 function status_change_percentage(value) {
   if (value > 0) {
@@ -338,7 +338,7 @@ const Dashboard = ({ currencyDetails, detailsData, flactuatedPrice }) => {
             <p className="text-[17px]">{item?.name}</p>
           </div>
         ),
-        current_price: "$" + " " + item?.current_price,
+        current_price: "$" + +item?.current_price,
         one_hour: status_change_percentage(
           Object.keys(detailsData).length > 0
             ? detailsData?.price_change_percentage_1h_in_currency[item?.symbol]
@@ -355,8 +355,8 @@ const Dashboard = ({ currencyDetails, detailsData, flactuatedPrice }) => {
             : 0
         ),
         last_updated: new Date(item?.last_updated)?.toLocaleString(),
-        market_cap: "$" + " " + item?.market_cap,
-        total_volume: "$" + " " + item?.total_volume,
+        market_cap: "$" + +item?.market_cap,
+        total_volume: "$" + +item?.total_volume,
         market_cap_change_percentage_24h: status_change_percentage(
           item?.market_cap_change_percentage_24h
         ),

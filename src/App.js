@@ -6,8 +6,6 @@ const URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&orde
 
 const ALL_URL = `https://api.coingecko.com/api/v3/coins/bitcoin`;
 
-const API_KEY = `6FD85708-DA0E-443E-859B-4090A79D6210`;
-
 const App = () => {
   const [currencyDetails, setCurrencyDetails] = useState({
     loading: false,
