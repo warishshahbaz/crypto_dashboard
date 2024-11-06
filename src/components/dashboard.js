@@ -216,7 +216,7 @@ const Dashboard = ({ currencyDetails, detailsData, flactuatedPrice }) => {
       legend: {
         display: true,
         labels: {
-          color: "#333", // Darker color for legend text
+          color: "#333",
           font: { size: 12 },
         },
       },
